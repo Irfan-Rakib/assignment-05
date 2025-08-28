@@ -1,8 +1,9 @@
-# Some Questions and Answer for Assignment-05
+# Some Questions and its Answer of Assignment-05
 
 ## 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
 Answer:
+
 **getElementById("id")**
 
 - selects one elements by its unique id
@@ -37,12 +38,12 @@ Answer:
 - Event Bubbling is the process where an event starts from the innermost target element and then propagates (bubbles) upward to its parent, grandparent, and so on until it reaches the document.
 
 - Example:
-**In html**
-<div id="parent">
+**In html:**
+<!-- <div id="parent">
   <button id="child">Click Me</button>
-</div>
+</div> -->
 
-**In Jabascript**
+**In Jabascript:**
 document.getElementById("parent").addEventListener("click", (){
 console.log("Parent clicked");
 });
