@@ -37,25 +37,6 @@ Answer:
 
 - Event Bubbling is the process where an event starts from the innermost target element and then propagates (bubbles) upward to its parent, grandparent, and so on until it reaches the document.
 
-- Example:
-**In html:**
-<!-- <div id="parent">
-  <button id="child">Click Me</button>
-</div> -->
-
-**In Jabascript:**
-document.getElementById("parent").addEventListener("click", (){
-console.log("Parent clicked");
-});
-
-document.getElementById("child").addEventListener("click", (){
-console.log("Child clicked");
-});
-
-output:
-Child clicked
-Parent clicked
-
 ## 4. What is Event Delegation in JavaScript? Why is it useful?
 
 Answer:
