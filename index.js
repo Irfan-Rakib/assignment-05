@@ -551,10 +551,10 @@ function addCallHistory(name, number) {
 const hotlines = [
   { id: 1, name: "National Emergency Number", number: "999" },
   { id: 2, name: "Police Helpline Number", number: "999" },
-  { id: 3, name: "Fire Service Number", number: "999" },
+  { id: 3, name: "Fire Service Number", number: "102" },
   { id: 4, name: "Ambulance Service", number: "1994-999999" },
   { id: 5, name: "Women & Child Helpline", number: "109" },
-  { id: 6, name: "Anti-Corruption Helpline", number: "999" },
+  { id: 6, name: "Anti-Corruption Helpline", number: "106" },
   { id: 7, name: "Electricity Helpline", number: "16216" },
   { id: 8, name: "Brac Helpline", number: "16445" },
   { id: 9, name: "Bangladesh Railway Helpline", number: "163" },
@@ -622,3 +622,50 @@ function smoothAlert(message) {
     setTimeout(() => alertBox.remove(), 500);
   }, 2000);
 }
+
+//  Freezed Navbar
+window.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+
+  if (nav) {
+    nav.style.position = "fixed";
+    nav.style.top = "0";
+    nav.style.left = "0";
+    nav.style.right = "0";
+    nav.style.margin = "16px auto";
+    nav.style.width = "95%";
+    nav.style.zIndex = "999";
+    nav.style.backgroundColor = "white";
+    nav.style.borderRadius = "12px";
+    nav.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+
+    const navHeight = nav.offsetHeight + 32;
+    document.body.style.paddingTop = navHeight + "px";
+  }
+});
+
+// Added Footer
+window.addEventListener("DOMContentLoaded", () => {
+  const footer = document.createElement("footer");
+
+  footer.style.backgroundColor = "white";
+  footer.style.padding = "20px";
+  footer.style.marginTop = "32px";
+  footer.style.boxShadow = "0 -2px 6px rgba(0,0,0,0.1)";
+  footer.style.textAlign = "center";
+  footer.style.borderTop = "1px solid #e5e7eb";
+  footer.style.fontFamily = "sans-serif";
+  footer.style.color = "#374151";
+  footer.style.fontSize = "14px";
+
+  footer.innerHTML = `
+    <div style="max-width: 1200px; margin: 0 auto;">
+      
+      <p style="margin-top: 6px;">Developed by <strong>Irfan Rakib</strong></p>
+      <p style="margin-top: 6px; font-size: 12px; color: #6b7280;">
+        &copy; ${new Date().getFullYear()} All rights reserved.
+      </p>
+    </div>
+  `;
+  document.body.appendChild(footer);
+});
