@@ -1,4 +1,3 @@
-// Shared functions
 // call & coin funtion
 document.getElementById("call-1").addEventListener("click", function () {
   alert("Calling national emergency number 999 ...");
@@ -141,4 +140,9 @@ buttons.forEach((btn) => {
       console.error("Copy failed", err);
     }
   });
+});
+
+// history function
+document.getElementById("clear-btn").addEventListener("click", function () {
+  document.getElementById("history-card").remove();
 });
