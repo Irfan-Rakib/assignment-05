@@ -612,7 +612,7 @@ document.getElementById("clear-btn").addEventListener("click", () => {
 function smoothAlert(message) {
   const alertBox = document.createElement("div");
   alertBox.className =
-    "fixed top-1/6 right-1/4 bg-gray-800 text-white px-5 py-3 rounded-lg ";
+    "fixed top-1/6 right-1/4 bg-gray-800 text-white px-4 py-2 rounded-lg ";
   alertBox.textContent = message;
 
   document.body.appendChild(alertBox);
